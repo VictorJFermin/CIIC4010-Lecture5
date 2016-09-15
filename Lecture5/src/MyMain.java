@@ -11,12 +11,12 @@ public class MyMain
 		
 		frame.add(theComponent);
 		
-		frame.setSize(800, 800);
+		frame.setSize(400, 400);
 		frame.setTitle("CIIC 4010 / ICOM 4015 Developers");	
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		
-		while(!theComponent.getReachedBottom()) {
+		while(!theComponent.someCarWon()) {
 			frame.repaint();
 			Thread.sleep(100);
 		}
