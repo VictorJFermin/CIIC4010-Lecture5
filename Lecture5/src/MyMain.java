@@ -7,14 +7,18 @@ public class MyMain
 	{
 		JFrame frame = new JFrame();
 		
-		CarStage theComponent = new CarStage();
+		final int FRAME_WIDTH = 400;
+		final int FRAME_HEIGHT = 400;
 		
+		CarStage theComponent = new CarStage(FRAME_HEIGHT);
 		frame.add(theComponent);
 		
-		frame.setSize(400, 400);
+		frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
 		frame.setTitle("CIIC 4010 / ICOM 4015 Developers");	
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
+
+
 		
 		while(!theComponent.someCarWon()) {
 			frame.repaint();
