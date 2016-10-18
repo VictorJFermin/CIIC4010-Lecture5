@@ -18,16 +18,13 @@ public class CarStage extends JComponent {
 
 	Random randomNumbers = new Random();
 
-	public CarStage(int frameHeight) {
-		int laneHeight = 50;
-		int numberOfLanes = Math.round(frameHeight / laneHeight);
-		// TO DO Make Sure numberOfLanes fit in frame
-		vehicles = new Vehicle[numberOfLanes];
-
+	public CarStage(int frameHeight, Vehicle[] vehicles) {
+		this.vehicles = new Vehicle[vehicles.length];
 		int nextYPos = 0;
-		for (int i=0; i < numberOfLanes; i++) {
-			vehicles[i] = new MutableCar(0, nextYPos, Color.BLUE, 10, 1, i);
-			nextYPos += laneHeight;
+		for (int i = 0; i<vehicles.length ; i++) {
+			vehicles[i].setPosition(0, nextYPos);
+			this.vehicles[i] = vehicles[i];
+			nextYPos += vehicles[i].getHeight() + 20;
 		}
 	}
 

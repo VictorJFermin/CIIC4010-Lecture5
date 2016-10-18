@@ -1,10 +1,10 @@
  import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.Line2D;
-import java.awt.geom.Point2D;
+//import java.awt.Graphics2D;
+//import java.awt.Rectangle;
+//import java.awt.geom.Ellipse2D;
+//import java.awt.geom.Line2D;
+//import java.awt.geom.Point2D;
 
 public abstract class Vehicle {
 
@@ -39,6 +39,8 @@ public abstract class Vehicle {
 	public int getNumber() {
 		return number;
 	}
+	
+	public abstract int getHeight();
 
 	public void setPosition(double xPos, double yPos) {
 		this.xPos = xPos;

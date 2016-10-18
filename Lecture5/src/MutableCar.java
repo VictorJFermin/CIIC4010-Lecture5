@@ -30,6 +30,10 @@ public class MutableCar extends Vehicle {
 		this.setColor(color);
 	}
 	
+	public int getHeight(){
+		return 30;
+	}
+	
 	public void draw(Graphics g) {
 
 		Graphics2D g2 = (Graphics2D) g;
